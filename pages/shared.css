@@ -2,3 +2,20 @@ h1 {
     font-family: Verdana;
     text-align: center;
 }
+
+p {
+    font-family: Verdana;
+    text-align: center;
+}
+
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
