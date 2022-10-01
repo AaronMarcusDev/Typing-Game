@@ -9,14 +9,21 @@
         <title>Typing game</title>
     </head>
     <body>
-        <h1>Typing game!</h1>
-        <p id="word"><b></b></p>
-        <p id="result"><b>No answer yet.</b></p>
+        <div class="main_wrapper">
+            <h1>Typing game!</h1>
+
+            <p id="word"><b></b></p>
+            <p id="result"><b>No answer yet.</b></p>
+            
             <br>
-        <textarea id="answer"></textarea>
-            <br>
-        <button id="check_answer_button" onclick="runCheckAnswerButton()">Check</button>
-            <br>
-        <button id="load_button" onclick="runLoadButton()">Start!</button>
+
+            <textarea id="answer"></textarea>
+
+            <br><br>
+            <div class="wrapper">
+                <button class="button-30" role="button" id="load_button" onclick="runLoadButton()">Start!</button>
+                <button class="button-30" role="button" id="check_answer_button" onclick="runCheckAnswerButton()">Check</button>
+            </div>
+        </div>
     </body>
 </html>
