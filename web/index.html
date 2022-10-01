@@ -1,25 +1,26 @@
 <html lang="en">
     <head>
+        <!-- Meta -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="shared.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="./CSS/global.css">
+        <link rel="stylesheet" href="./CSS/align_wrappers.css">
+        <link rel="stylesheet" href="./CSS/button-30.css">
+        <!-- Javascript -->
+        <script type="text/javascript" src="./JS/script.js"></script>
         <script type="text/javascript" src="/eel.js"></script>
-        <script type="text/javascript" src="script.js"></script>
         <title>Typing game</title>
     </head>
     <body>
         <div class="main_wrapper">
             <h1>Typing game!</h1>
 
-            <p id="word"><b></b></p>
-            <p id="result"><b>No answer yet.</b></p>
+            <p id="word"><b></b></p><br>
             
-            <br>
-
-            <textarea id="answer" spellcheck="false"></textarea>
-
-            <br><br>
+            <textarea id="answer" spellcheck="false"></textarea><br>
+            <p id="result"><b>No answer yet.</b></p><br>
             <div class="wrapper">
                 <button class="button-30" role="button" id="load_button" onclick="runLoadButton()">Start!</button>
                 <button class="button-30" role="button" id="check_answer_button" onclick="runCheckAnswerButton()">Check</button>
