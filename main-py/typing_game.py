@@ -13,7 +13,7 @@ def get_word():
 
 @eel.expose
 def check_answer(user_answer):
-    if user_answer == word:
+    if user_answer.lower() == str(word).lower():
         return "Correct!"
     else:
         return "Incorrect."
