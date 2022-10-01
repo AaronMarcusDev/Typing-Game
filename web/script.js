@@ -10,11 +10,15 @@ function changeButtonState() {
     document.getElementById("load_button").innerHTML = "Next Word";
 }
 
-let runLoadButton = () => {loadWord(); changeButtonState();}
+function clearResult() {
+    document.getElementById("result").innerHTML = "";
+}
+
+let runLoadButton = () => {loadWord(); clearResult(); changeButtonState();}
 
 function checkAnswer() {
     eel.check_answer(document.getElementById("answer").value)(function(answer) {
-        document.getElementById("word").innerHTML = answer;
+        document.getElementById("result").innerHTML = "<b>" + answer + "</b>";
     });
 }
 
