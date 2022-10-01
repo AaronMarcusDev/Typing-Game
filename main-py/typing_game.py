@@ -21,4 +21,4 @@ def check_answer(user_answer):
 
 if __name__ == '__main__':
     eel.init('../web')
-    eel.start('index.html', size=(500, 600))
+    eel.start('index.html', size=(500, 500))
