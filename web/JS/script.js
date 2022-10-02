@@ -1,5 +1,4 @@
 // load_button
-
 function loadWord() {
     eel.get_word()(function(word) {
         document.getElementById("word").innerHTML = "<p>" + word + "</p>";
@@ -17,10 +16,14 @@ function clearResult() {
 
 let runLoadButton = () => {loadWord(); changeButtonState(); clearResult();}
 
+let points = 0;
 // check_answer_button
 function checkAnswer() {
     eel.check_answer(document.getElementById("answer").value)(async function(answer) {
         document.getElementById("result").innerHTML = "<p>" + answer + "</p>";
+        if (answer == "Correct!") {
+            document.getElementById("point_counter").innerHTML = "<p>Points: " + ++points + "</p>";
+        }
         await new Promise(resolve => setTimeout(resolve, 800));
         document.getElementById("result").innerHTML = "<p class=\"invisible\"> a </p>";
     });
