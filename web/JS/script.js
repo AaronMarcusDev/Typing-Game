@@ -2,7 +2,7 @@
 
 function loadWord() {
     eel.get_word()(function(word) {
-        document.getElementById("word").innerHTML = word;
+        document.getElementById("word").innerHTML = "<p>" + word + "</p>";
     });
 }
 
@@ -11,15 +11,18 @@ function changeButtonState() {
 }
 
 function clearResult() {
-    document.getElementById("result").innerHTML = "";
+    document.getElementById("answer").value = "";
+    document.getElementById("result").innerHTML = "<p>No answer yet</p>";
 }
 
-let runLoadButton = () => {loadWord(); clearResult(); changeButtonState();}
+let runLoadButton = () => {loadWord(); changeButtonState(); clearResult();}
 
 function checkAnswer() {
-    eel.check_answer(document.getElementById("answer").value)(function(answer) {
-        document.getElementById("result").innerHTML = "<b>" + answer + "</b>";
+    eel.check_answer(document.getElementById("answer").value)(async function(answer) {
+        document.getElementById("result").innerHTML = "<p>" + answer + "</p>";
+        await new Promise(resolve => setTimeout(resolve, 800));
+        document.getElementById("result").innerHTML = "<p class=\"invisible\"> a </p>";
     });
 }
 
-let runCheckAnswerButton = () => {checkAnswer();}
+let runCheckAnswerButton = () => checkAnswer();
