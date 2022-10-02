@@ -1,10 +1,12 @@
 h1 {
-  font-family: "JetBrains Mono", monospace;
+  font-family: 'Aldrich';
+  /* font-family: "JetBrains Mono", monospace; */
     /* text-align: center; */
 }
 
 p {
-  font-family: "JetBrains Mono", monospace;
+  font-family: 'Aldrich';
+  /* font-family: "JetBrains Mono"; */
     /* text-align: center; */
 }
 
@@ -12,7 +14,8 @@ textarea {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  font-family: "JetBrains Mono", monospace;
+  font-family: 'Aldrich';
+  /* font-family: "JetBrains Mono"; */
   font-weight: 1000;
 }
 
