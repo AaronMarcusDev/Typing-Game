@@ -17,6 +17,7 @@ function clearResult() {
 
 let runLoadButton = () => {loadWord(); changeButtonState(); clearResult();}
 
+// check_answer_button
 function checkAnswer() {
     eel.check_answer(document.getElementById("answer").value)(async function(answer) {
         document.getElementById("result").innerHTML = "<p>" + answer + "</p>";
@@ -26,3 +27,11 @@ function checkAnswer() {
 }
 
 let runCheckAnswerButton = () => checkAnswer();
+
+// load_answer_button
+
+function loadAnswer() {
+    eel.get_answer()(function(answer) {
+        document.getElementById("word").innerHTML = answer;
+    });
+}

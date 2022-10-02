@@ -14,9 +14,17 @@ def get_word():
 @eel.expose
 def check_answer(user_answer):
     if user_answer.lower() == str(word).lower():
-        return "Correct!"
+        if user_answer.lower() == "none":
+            return "Incorrect"
+        else:
+            return "Correct!"
     else:
-        return "Incorrect."
+        return "Incorrect"
+
+@eel.expose
+def get_answer():
+    if word is not None:
+        return word
 
 
 if __name__ == '__main__':
