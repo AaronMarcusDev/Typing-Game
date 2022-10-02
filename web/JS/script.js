@@ -7,7 +7,7 @@ function loadWord() {
 }
 
 function changeButtonState() {
-    document.getElementById("load_button").innerHTML = "Next Word";
+    document.getElementById("load_button").innerHTML = "Next word";
 }
 
 function clearResult() {
