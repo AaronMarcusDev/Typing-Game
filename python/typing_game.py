@@ -1,8 +1,10 @@
 import eel
 from fetch_words import Word_Fetcher
 
+
 fetcher = Word_Fetcher("https://random-words-api.vercel.app/word")
 word = None
+
 
 @eel.expose
 def get_word():
@@ -10,6 +12,7 @@ def get_word():
     global word; word = word_data['word']
     description = word_data['definition']
     return description
+
 
 @eel.expose
 def check_answer(user_answer):
@@ -20,6 +23,7 @@ def check_answer(user_answer):
             return "Correct!"
     else:
         return "Incorrect"
+
 
 @eel.expose
 def get_answer():
